@@ -11,7 +11,10 @@ export default function TodoItem(props) {
                 onChange={() => props.handleChangeProps(props.todo.id)}
                 label={props.todo.title}>
             </Form.Check>
-            <button value={addButton} className={addButton? "delete-todoItem-btn visible" : "delete-todoItem-btn hidden"} onClick={() => props.deleteTodoProps(props.todo.id)}>x</button>
+            <button value={addButton} className={addButton? "delete-todoItem-btn visible" : "delete-todoItem-btn hidden"} 
+            onClick={() => {
+                props.deleteTodoProps(props.todo.id)
+                if(!props.todo.completed)alert("Give attention! you going to delete uncompleted todo. are you sure?")}}>x</button>
 
         </Row>
     )

@@ -1,3 +1,4 @@
+
 .app-todos{
   font-family: 'Oswald', sans-serif;
   background-image: linear-gradient(white,rgb(173, 226, 189),rgb(120,200,200),white);
@@ -7,4 +8,35 @@
   text-align: center;
   margin: 20px;
   font-size: 3em;
+}
+.button-filter{
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+}
+
+.button-filter.marked{
+  font-size: 1.2em;
+  color: rgb(37, 112, 112);
+  font-weight: bold;
+  background-color: transparent;
+  outline: none;
+}
+
+.bottom-row{
+  padding-top: 20px;
+  position: relative;
+}
+.button-container{
+  position: absolute;
+  right: 20px;
+}
+.open-todos{
+  position: absolute;
+  left: 20px;
+  padding: 10px;
+}
+.delete-uncompleted-modal{
+  z-index: 100;
+  position: relative;
 }
