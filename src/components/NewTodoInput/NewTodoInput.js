@@ -5,7 +5,6 @@ export default function NewTodoInput(props) {
     const [newTodo, setNewTodo] = useState("");
     const handleSubmit = (e, props) => {
         e.preventDefault();
-        console.log(newTodo);
         props.addTodoProps(newTodo);
         setNewTodo("");
     }

@@ -1,5 +1,5 @@
 import './App.css';
-import { Container } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import { useState } from 'react';
 import TodoList from './components/TodoList/TodoList';
 import NewTodoInput from './components/NewTodoInput/NewTodoInput';
@@ -53,11 +53,23 @@ function App() {
         todos.length > 0 ?
           <div>
             <TodoList
-              todos={todos}
+              todos={filter === "All" ?todos
+               : filter === "Completed"? todos.filter(todo => todo.completed) 
+               : todos.filter(todo => !todo.completed)
+               }
               setTodos={setTodos}
               handleChangeProps={handleChange}
               deleteTodoProps={deleteTodo} />
-            <div>{opensTodos} items left</div>
+            <Row>
+              <div className="col-3">{opensTodos} items left</div>
+              <div className="col-9">
+                <button className="button-filter" onClick={()=>setFilter("All")}>All</button>
+                <button className="button-filter" onClick={()=>setFilter("Active")}>Active</button>
+                <button className="button-filter" onClick={()=>setFilter("Completed")}>Completed</button>
+              </div>
+            </Row>
+
+
           </div> : ""
 
       }
