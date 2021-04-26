@@ -10,7 +10,7 @@ function App() {
   const [filter, setFilter] = useState("All");
 
   const addTodoItem = title => {
-    setTodos(todos.concat({ "title": title, "id": todos.length, "completed": false }));
+    setTodos(todos.concat({ "title": title, "id": '_' + Math.random().toString(36).substr(2, 9), "completed": false }));
     setOpensTodos(opensTodos + 1);
   };
 
@@ -36,18 +36,9 @@ function App() {
     setTodos(todos.filter(todo => todo.id !== id));
   };
 
-  const Header = () => {
-    return (
-      <>
-        <h1>Todos</h1>
-      </>
-    )
-  }
-
-
   return (
-    <Container>
-      <Header />
+    <Container className="app-todos">
+      <h1 className="header-todo">Todos</h1>
       <NewTodoInput addTodoProps={addTodoItem} />
       {
         todos.length > 0 ?
