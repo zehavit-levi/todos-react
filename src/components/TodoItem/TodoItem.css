@@ -5,6 +5,18 @@
     text-decoration: line-through 1px solid rgb(192, 189, 189);
     color: rgb(192, 189, 189);
 }
-.delete-todoItem-btn{
+.delete-todoItem-btn.visible{
     color: red;
+    visibility: visible;
+    background-color: transparent;
+    border: transparent ; 
+    font-size: 1em;
+    position: absolute;
+    right: 10px;
+}
+.delete-todoItem-btn.hidden{
+    visibility: hidden;
+}
+.todoitem-row{
+    position: relative;
 }
