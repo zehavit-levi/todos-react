@@ -36,7 +36,12 @@
   left: 20px;
   padding: 10px;
 }
-.delete-uncompleted-modal{
-  z-index: 100;
-  position: relative;
+
+.modal-delete-button{
+  background-image: linear-gradient(white,rgb(173, 226, 189),rgb(120,200,200),white);
+  color: black;
+  border: transparent;
+}
+.delete-modal{
+  font-family: 'Oswald', sans-serif;
 }

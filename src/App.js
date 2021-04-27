@@ -1,16 +1,16 @@
 import './App.css';
-import { Alert, Button, Container, ModalBody, ModalDialog, ModalFooter, ModalTitle, Row } from 'react-bootstrap';
+import {Button, Container, Modal, ModalBody,  ModalFooter, ModalTitle, Row } from 'react-bootstrap';
 import { useState } from 'react';
 import TodoList from './components/TodoList/TodoList';
 import NewTodoInput from './components/NewTodoInput/NewTodoInput';
-import { Modal } from 'bootstrap';
 import ModalHeader from 'react-bootstrap/esm/ModalHeader';
 
 function App() {
   const [todos, setTodos] = useState([]);
   const [opensTodos, setOpensTodos] = useState(0);
   const [filter, setFilter] = useState("All");
-  const [showAlert, setShowAlert] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [todoForDel, setTodoForDel] = useState();
 
   const addTodoItem = title => {
     setTodos(todos.concat({ "title": title, "id": '_' + Math.random().toString(36).substr(2, 9), "completed": false }));
@@ -41,7 +41,16 @@ function App() {
     setTodos(todos.filter(todo => todo.id !== id));
   };
 
-
+  const handleClose = () => setShowModal(false);
+  const handleShow = (id) => {
+    setTodoForDel(id);
+    setShowModal(true);
+  }
+  const handleCloseAndDelete = () => {
+    deleteTodo(todoForDel);
+    setTodoForDel();
+    setShowModal(false);
+  }
 
   return (
     <Container className="app-todos">
@@ -57,7 +66,8 @@ function App() {
               }
               setTodos={setTodos}
               handleChangeProps={handleChange}
-              deleteTodoProps={deleteTodo} />
+              deleteTodoProps={deleteTodo}
+              handleShow={handleShow} />
             <Row className="bottom-row">
               <div className="open-todos">{opensTodos} items left</div>
               <div className="button-container">
@@ -68,6 +78,20 @@ function App() {
             </Row>
           </div> : ""
       }
+      <Modal show={showModal} onHide={handleClose} className="delete-modal">
+        <ModalHeader closeButton>
+          <ModalTitle>Attention Please!</ModalTitle>
+        </ModalHeader>
+        <ModalBody>you going to remove a open todo, are you sure?</ModalBody>
+        <ModalFooter>
+          <Button className="modal-delete-button" onClick={handleClose}>
+            No, Don't delete!
+          </Button>
+          <Button className="modal-delete-button" onClick={handleCloseAndDelete}>
+           Yes, Delete
+          </Button>
+        </ModalFooter>
+      </Modal>
     </Container>
   );
 }
