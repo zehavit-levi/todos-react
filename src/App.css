@@ -3,7 +3,7 @@
   font-family: 'Oswald', sans-serif;
   background-image: linear-gradient(white,rgb(173, 226, 189),rgb(120,200,200),white);
   height: 100vh;
-  
+  overflow: auto;
 }
 .header-todo{
   text-align: center;
@@ -13,7 +13,7 @@
 .button-filter{
   background-color: transparent;
   border: none;
-  padding: 10px;
+  padding:0 10px 0 10px;
 }
 
 .button-filter.marked{

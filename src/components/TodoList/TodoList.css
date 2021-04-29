@@ -1,6 +1,12 @@
 .transparet-element{
     background-color: transparent;
     border: 0;
-    border-bottom: 0.1px solid white;
-
+    border-bottom: 0.1px solid white;   
+}
+.transparet-element.flex-item{
+    display: flex;
+    justify-content: space-between;
+}
+.transparet-element.overflow-auto{
+    overflow: auto;
 }

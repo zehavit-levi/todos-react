@@ -6,7 +6,7 @@ export default function TodoList(props) {
 
 
     return (
-        <ListGroup className="transparet-element">
+        <ListGroup className="overflow-auto">
             {props.todos.map(todo =>
                 <ListGroupItem  className="transparet-element" key={todo.id}>
                     <TodoItem className="transparet-element" todo={todo}

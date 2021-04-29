@@ -11,14 +11,14 @@
     background-color: transparent;
     border: transparent ; 
     font-size: 1em;
-    position: absolute;
-    right: 10px;
+    font-weight: 900;
+   
 }
 .delete-todoItem-btn.hidden{
     visibility: hidden;
     pointer-events: none;
 }
 .todoitem-row{
-    position: relative;
-    background-color: transparent !important;
+    display: flex;
+    justify-content: space-between;
 }

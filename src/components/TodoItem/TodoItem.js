@@ -5,7 +5,7 @@ export default function TodoItem(props) {
     const [addButton, setAddButton] = useState();
     return (
         <Row className="todoitem-row" onMouseOver={() => setAddButton(true)} onMouseOut={() => setAddButton(false)}>
-            <Form.Check className={props.todo.completed ? "todoItem-checkbox checked todoitem-row" : "todoItem-checkbox todoitem-row"}
+            <Form.Check className={props.todo.completed ? "todoItem-checkbox checked" : "todoItem-checkbox col-10 "}
                 type="checkbox"
                 checked={props.todo.completed}
                 onChange={() => props.handleChangeProps(props.todo.id)}
