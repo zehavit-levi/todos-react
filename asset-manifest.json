@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/todos-react/static/css/main.a7116c06.chunk.css",
+    "main.css": "/todos-react/static/css/main.4e3c3b6c.chunk.css",
     "main.js": "/todos-react/static/js/main.4295d306.chunk.js",
     "main.js.map": "/todos-react/static/js/main.4295d306.chunk.js.map",
     "runtime-main.js": "/todos-react/static/js/runtime-main.90b3b520.js",
@@ -10,13 +10,13 @@
     "static/js/3.18ed5134.chunk.js": "/todos-react/static/js/3.18ed5134.chunk.js",
     "static/js/3.18ed5134.chunk.js.map": "/todos-react/static/js/3.18ed5134.chunk.js.map",
     "index.html": "/todos-react/index.html",
-    "static/css/main.a7116c06.chunk.css.map": "/todos-react/static/css/main.a7116c06.chunk.css.map",
+    "static/css/main.4e3c3b6c.chunk.css.map": "/todos-react/static/css/main.4e3c3b6c.chunk.css.map",
     "static/js/2.231180fc.chunk.js.LICENSE.txt": "/todos-react/static/js/2.231180fc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.90b3b520.js",
     "static/js/2.231180fc.chunk.js",
-    "static/css/main.a7116c06.chunk.css",
+    "static/css/main.4e3c3b6c.chunk.css",
     "static/js/main.4295d306.chunk.js"
   ]
 }
