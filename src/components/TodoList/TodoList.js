@@ -1,14 +1,15 @@
 import { ListGroup, ListGroupItem } from "react-bootstrap";
 import TodoItem from "../TodoItem/TodoItem";
+import './TodoList.css'
 
 export default function TodoList(props) {
 
 
     return (
-        <ListGroup variant="flush">
+        <ListGroup  className="transparet-element">
             {props.todos.map(todo =>
-                <ListGroupItem key={todo.id}>
-                    <TodoItem todo={todo}
+                <ListGroupItem  className="transparet-element" key={todo.id}>
+                    <TodoItem className="transparet-element" todo={todo}
                         key={todo.id}
                         handleChangeProps={props.handleChangeProps}
                         deleteTodoProps={props.deleteTodoProps}
