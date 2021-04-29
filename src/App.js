@@ -58,7 +58,7 @@ function App() {
       <NewTodoInput addTodoProps={addTodoItem} />
       {
         todos.length > 0 ?
-          <div>
+          <>
             <TodoList
               todos={filter === "All" ? todos
                 : filter === "Completed" ? todos.filter(todo => todo.completed)
@@ -76,7 +76,7 @@ function App() {
                 <button className={filter === "Completed" ? "button-filter marked" : "button-filter"} onClick={() => setFilter("Completed")}>Completed</button>
               </div>
             </Row>
-          </div> : ""
+          </> : ""
       }
       <Modal show={showModal} onHide={handleClose} className="delete-modal">
         <ModalHeader closeButton>
