@@ -19,4 +19,5 @@
 }
 .todoitem-row{
     position: relative;
+    background-color: transparent !important;
 }
