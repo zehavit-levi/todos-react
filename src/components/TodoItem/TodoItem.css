@@ -12,6 +12,7 @@
     border: transparent ; 
     font-size: 1em;
     font-weight: 900;
+    z-index: 100;
    
 }
 .delete-todoItem-btn.hidden{
