@@ -16,6 +16,7 @@
 }
 .delete-todoItem-btn.hidden{
     visibility: hidden;
+    pointer-events: none;
 }
 .todoitem-row{
     position: relative;

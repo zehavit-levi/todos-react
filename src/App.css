@@ -26,16 +26,14 @@
 
 .bottom-row{
   padding-top: 20px;
-  position: relative;
+  display: flex;
+  user-select: none;
+  justify-content: space-between;
 }
 .button-container{
-  position: absolute;
-  right: 20px;
 }
 .open-todos{
-  position: absolute;
-  left: 20px;
-  padding: 10px;
+  padding-left: 10px;
 }
 
 .modal-delete-button{
