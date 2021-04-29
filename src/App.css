@@ -2,6 +2,7 @@
 .app-todos{
   font-family: 'Oswald', sans-serif;
   background-image: linear-gradient(white,rgb(173, 226, 189),rgb(120,200,200),white);
+  height: 100vh;
   
 }
 .header-todo{
